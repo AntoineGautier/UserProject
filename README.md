@@ -13,6 +13,7 @@ This package demonstrates the expected structure of what the Modelica export fea
 - **ZoneEquipment/**: Zone-level HVAC equipment models
   - Contains a single specified configuration for VAV boxes with reheat.
 - **(AirHandlersFans | ZoneEquipment)/Configuration/**: Data records with configuration parameters, one for each configuration
+  - All parameter bindings are ***literal assignments***: expressions must be pre-evaluated to their numeric/string values before export.
   - These records only contain a subset of all the parameters that define a system configuration and which are exposed in ctrl-flow.
   - This subset is the one needed to enable/disable the control parameters and equipment characteristics in **Data/**.
 - **Data/**: Data records with control parameters and equipment characteristics
