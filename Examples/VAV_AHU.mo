@@ -18,6 +18,11 @@ model VAV_AHU
 
   inner parameter UserProject.Data.AllSystems datAll;
 
+  // Alternatively, if configuration records are not exported:
+  //
+  // inner parameter UserProject.Data.AllSystems datAll(
+  //   VAV_AHU(cfg={VAV_AHU_1.cfg, VAV_AHU_2.cfg}));
+
   UserProject.AirHandlersFans.VAV_AHU_Config1 VAV_AHU_1(
     nZon=2,
     ctl(
